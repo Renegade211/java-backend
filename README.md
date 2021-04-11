@@ -4,9 +4,13 @@ To run use IDE or Docker
 
 To run the database:
 docker run --name [container_name] -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres
+
 Then in root directory of your project:
+
 docker cp deviceservice_db.sql [container_name]:/
+
 docker exec -it [container_name] bash
+
 psql -U [postgres] --file deviceservice_db.sql
 
 Main API endpoints:
